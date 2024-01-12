@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="disklrucache">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../../../Nuget/xamarin.android.glide.disklrucache/4.15.1.2/jar/disklrucache.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

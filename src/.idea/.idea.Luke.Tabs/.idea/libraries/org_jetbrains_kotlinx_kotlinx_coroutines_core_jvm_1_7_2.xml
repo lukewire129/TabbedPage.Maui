@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="org.jetbrains.kotlinx.kotlinx-coroutines-core-jvm-1.7.2">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../../../Nuget/xamarin.kotlinx.coroutines.core.jvm/1.7.2.1/jar/org.jetbrains.kotlinx.kotlinx-coroutines-core-jvm-1.7.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
