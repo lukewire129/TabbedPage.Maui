@@ -19,6 +19,15 @@
 	</PropertyGroup>
 
 	<ItemGroup>
+	  <AndroidResource Remove="UI\Views\**" />
+	  <Compile Remove="UI\Views\**" />
+	  <EmbeddedResource Remove="UI\Views\**" />
+	  <MauiCss Remove="UI\Views\**" />
+	  <MauiXaml Remove="UI\Views\**" />
+	  <None Remove="UI\Views\**" />
+	</ItemGroup>
+
+	<ItemGroup>
 	  <Compile Remove="Themes\Units\LukeTabsItem.xaml.cs" />
 	</ItemGroup>
 
@@ -33,7 +42,6 @@
 
 	<ItemGroup>
 	  <Folder Include="Themes\Views\" />
-	  <Folder Include="UI\Views\" />
 	</ItemGroup>
 
 	<ItemGroup>

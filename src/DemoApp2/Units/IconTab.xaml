@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<units:LukeTabsItem
+    x:Class="DemoApp2.Units.IconTab"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:mi="http://www.aathifmahir.com/dotnet/2022/maui/icons"
+    xmlns:units="clr-namespace:Luke.Tabs.UI.Units;assembly=Luke.Tabs"
+    x:Name="this">
+    <Grid HeightRequest="100">
+        <Grid x:Name="PART_IconArea" HorizontalOptions="Center">
+            <Ellipse
+                x:Name="PART_Circle"
+                Fill="#387bea"
+                HeightRequest="60"
+                IsVisible="False    "
+                WidthRequest="60" />
+            <mi:MauiIcon
+                x:Name="PART_Icon"
+                HorizontalOptions="Center"
+                IconAutoScaling="True"
+                IconColor="#b5bac6"
+                IconSize="30"
+                VerticalOptions="Center">
+                <mi:MauiIcon.Triggers>
+                    <DataTrigger
+                        Binding="{Binding Type, Source={x:Reference this}}"
+                        TargetType="{x:Type mi:MauiIcon}"
+                        Value="Home">
+                        <Setter Property="Icon" Value="{mi:MaterialOutlinedIcons Home}" />
+                    </DataTrigger>
+                    <DataTrigger
+                        Binding="{Binding Type, Source={x:Reference this}}"
+                        TargetType="{x:Type mi:MauiIcon}"
+                        Value="Shop">
+                        <Setter Property="Icon" Value="{mi:MaterialOutlinedIcons Search}" />
+                    </DataTrigger>
+                    <DataTrigger
+                        Binding="{Binding Type, Source={x:Reference this}}"
+                        TargetType="{x:Type mi:MauiIcon}"
+                        Value="Wishlist">
+                        <Setter Property="Icon" Value="{mi:MaterialOutlinedIcons Favorite}" />
+                    </DataTrigger>
+                    <DataTrigger
+                        Binding="{Binding Type, Source={x:Reference this}}"
+                        TargetType="{x:Type mi:MauiIcon}"
+                        Value="Cart">
+                        <Setter Property="Icon" Value="{mi:MaterialOutlinedIcons ShoppingCart}" />
+                    </DataTrigger>
+                    <DataTrigger
+                        Binding="{Binding Type, Source={x:Reference this}}"
+                        TargetType="{x:Type mi:MauiIcon}"
+                        Value="Me">
+                        <Setter Property="Icon" Value="{mi:MaterialOutlinedIcons Person}" />
+                    </DataTrigger>
+                </mi:MauiIcon.Triggers>
+            </mi:MauiIcon>
+        </Grid>
+
+        <Label
+            x:Name="PART_Text"
+            Margin="0,70,0,0"
+            FontAttributes="Bold"
+            FontSize="14"
+            HorizontalOptions="Center"
+            Text="{Binding Text, Source={x:Reference this}}"
+            TextColor="#b5bac6" />
+    </Grid>
+</units:LukeTabsItem>

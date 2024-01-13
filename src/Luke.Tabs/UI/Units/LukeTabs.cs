@@ -65,10 +65,14 @@ public partial class LukeTabs : TemplatedView
     }
     void UpdateIndicator()
     {
+        if (Indicator == null)
+            return;
         this._indicator.Content = Indicator;
     }
     void UpdateBackground()
     {
+        if (TabsBackground == null)
+            return;
         this._tabsBackground.Content = TabsBackground;
     }
 
@@ -100,6 +104,7 @@ public partial class LukeTabs : TemplatedView
 
     void IndicatorUpdate()
     {
+        if(Indicator == null) return;   
         this._indicator.Content = Indicator;
     }
 

@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="DemoApp2.MainPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:ctrls="clr-namespace:DemoApp2.Units"
+    xmlns:units="clr-namespace:Luke.Tabs.UI.Units;assembly=Luke.Tabs"
+    x:Name="this">
+    <units:LukeTabs HeightRequest="100" WidthRequest="440">
+        <units:LukeTabs.TabsBackground>
+            <Grid BackgroundColor="#fffdff" />
+        </units:LukeTabs.TabsBackground>
+        <units:LukeTabsItems>
+            <ctrls:IconTab Text="Home" Type="Home" />
+            <ctrls:IconTab Text="Shop" Type="Shop" />
+            <ctrls:IconTab Text="Wishlist" Type="Wishlist" />
+            <ctrls:IconTab Text="Cart" Type="Cart" />
+            <ctrls:IconTab Text="Me" Type="Me" />
+        </units:LukeTabsItems>
+    </units:LukeTabs>
+</ContentPage>
