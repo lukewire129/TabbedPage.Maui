@@ -3,21 +3,36 @@
     x:Class="DemoApp.MainPage"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:units="clr-namespace:Luke.Tabs.UI.Units;assembly=Luke.Tabs"
-    xmlns:ctrls="clr-namespace:DemoApp.Units">
+    xmlns:ctrls="clr-namespace:DemoApp.Units"
+    xmlns:units="clr-namespace:Luke.Tabs.UI.Units;assembly=Luke.Tabs">
     <units:LukeTabs
-        Background="#DDDDDD"
-        CornerRadius="5,5,5,5"
         HeightRequest="120"
-        Opacity="0.7"
+        VerticalOptions="End"
         WidthRequest="440">
+        <units:LukeTabs.Padding>
+            <OnPlatform x:TypeArguments="Thickness">
+                <On Platform="WinUI" Value="20,20,20, 0" />
+                <On Platform="Android" Value="20,40,20, 0" />
+            </OnPlatform>
+        </units:LukeTabs.Padding>
+        <units:LukeTabs.TabsBackground>
+            <Border Margin="0,40,0,0" Background="#DDDDDD">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="10" />
+                </Border.StrokeShape>
+            </Border>
+        </units:LukeTabs.TabsBackground>
+        <units:LukeTabs.Indicator>
+            <ctrls:Indicator />
+        </units:LukeTabs.Indicator>
         <units:LukeTabsItems>
-            <ctrls:IconTab  Text="Microsoft" Type="Microsoft" />
+            <ctrls:IconTab Text="Microsoft" Type="Microsoft" />
             <ctrls:IconTab Text="Apple" Type="Apple" />
-            <ctrls:IconTab  IsSelected="True"
-                            Text="Google"
-                            Type="Google" />
-            <ctrls:IconTab  Text="Facebook" Type="Facebook" />
+            <ctrls:IconTab
+                IsSelected="True"
+                Text="Google"
+                Type="Google" />
+            <ctrls:IconTab Text="Facebook" Type="Facebook" />
             <ctrls:IconTab Text="Instagram" Type="Instagram" />
         </units:LukeTabsItems>
     </units:LukeTabs>

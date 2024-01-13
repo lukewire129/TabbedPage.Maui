@@ -67,4 +67,10 @@
 	  <ProjectReference Include="..\Luke.Tabs\Luke.Tabs.csproj" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <MauiXaml Update="Units\Indicator.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	</ItemGroup>
+
 </Project>

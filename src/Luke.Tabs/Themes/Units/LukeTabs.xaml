@@ -12,29 +12,15 @@
         <Setter Property="ControlTemplate">
             <ControlTemplate>
                 <Grid>
-                    <Border
-                        x:Name="PART_Area"
-                        Padding="{TemplateBinding Padding}"
-                        Background="{TemplateBinding Background}"
-                        HeightRequest="{TemplateBinding HeightRequest}"
-                        Opacity="{TemplateBinding Opacity}"
-                        WidthRequest="{TemplateBinding WidthRequest}">
-                        <Border.StrokeShape>
-                            <RoundRectangle CornerRadius="{Binding CornerRadius, Source={RelativeSource Mode=Self}}" />
-                        </Border.StrokeShape>
-                    </Border>
+                    <ContentView x:Name="PART_TabsBackground" />
+                    <ContentView x:Name="PART_Indicator" HorizontalOptions="Start" />
                     <Border
                         Padding="{TemplateBinding Padding}"
                         HeightRequest="{TemplateBinding HeightRequest}"
                         StrokeThickness="0"
                         WidthRequest="{TemplateBinding WidthRequest}">
-                        <Grid x:Name="PART_Grd">
-                            <Grid.Padding>
-                                <OnPlatform x:TypeArguments="Thickness">
-                                    <On Platform="Window" Value="20,20,20, 0" />
-                                    <On Platform="Android" Value="20,40,20, 0" />
-                                </OnPlatform>
-                            </Grid.Padding>
+                        <Grid>
+                            <Grid x:Name="PART_Grd" />
                         </Grid>
                     </Border>
                 </Grid>

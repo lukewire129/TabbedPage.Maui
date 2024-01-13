@@ -5,6 +5,7 @@ namespace Luke.Tabs.UI.Units;
 [ContentProperty(nameof(Items))]
 public partial class LukeTabs : TemplatedView
 {
+
     
     public static readonly BindableProperty ItemsProperty = BindableProperty.Create(nameof(Items), typeof(LukeTabsItems), typeof(LukeTabs), default(LukeTabsItems), propertyChanged: OnItemsChanged);
 
@@ -27,13 +28,48 @@ public partial class LukeTabs : TemplatedView
         get => (LukeTabsItem)GetValue(SelectedItemProperty);
         set { SetValue(SelectedItemProperty, value); }
     }
-    Border _containerArea;
+
+    public static readonly BindableProperty IndicatorProperty =
+            BindableProperty.Create (nameof (Indicator), typeof (View), typeof (LukeTabs), propertyChanged:(bindable, oldValue, newValue)=>
+            {
+                (bindable as LukeTabs)?.UpdateIndicator ();
+            });
+
+    public View Indicator
+    {
+        get => (View)GetValue (IndicatorProperty);
+        set { SetValue (IndicatorProperty, value); }
+    }
+    public static readonly BindableProperty TabsBackgroundProperty =
+            BindableProperty.Create (nameof (TabsBackground), typeof (View), typeof (LukeTabs), propertyChanged: (bindable, oldValue, newValue) =>
+            {
+                (bindable as LukeTabs)?.UpdateBackground ();
+            });
+
+    public View TabsBackground
+    {
+        get => (View)GetValue (TabsBackgroundProperty);
+        set { SetValue (TabsBackgroundProperty, value); }
+    }
+
     Grid _container;
+
+    ContentView _tabsBackground;
+    ContentView _indicator;
     protected override void OnApplyTemplate()
     {
         base.OnApplyTemplate();
-        _containerArea = GetTemplateChild ("PART_Area") as Border;
+        _tabsBackground = GetTemplateChild ("PART_TabsBackground") as ContentView;
+        _indicator = GetTemplateChild ("PART_Indicator") as ContentView;
         _container = GetTemplateChild("PART_Grd") as Grid;
+    }
+    void UpdateIndicator()
+    {
+        this._indicator.Content = Indicator;
+    }
+    void UpdateBackground()
+    {
+        this._tabsBackground.Content = TabsBackground;
     }
 
     void UpdateItems()
@@ -57,6 +93,14 @@ public partial class LukeTabs : TemplatedView
                 _container.Children.Add(child);
             }
         }
+        if (this._indicator.Content == null)
+            return;
+        IndicatorUpdate ();
+    }
+
+    void IndicatorUpdate()
+    {
+        this._indicator.Content = Indicator;
     }
 
     [EditorBrowsable(EditorBrowsableState.Never)]
@@ -76,7 +120,10 @@ public partial class LukeTabs : TemplatedView
 
         SelectedItem = selectedItem;
 
-        //_circle.TranslateTo (selectedItem.Index * 80, 0);
+        if(_indicator.Content is LukeTabIndicator indicator)
+        {
+            indicator.SelectionItem (selectedItem.Index);            
+        }
     }
 
     void UnSelectItems(LukeTabsItems items)

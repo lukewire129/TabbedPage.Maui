@@ -1,0 +1,16 @@
+using Luke.Tabs.UI.Units;
+
+namespace DemoApp.Units;
+
+public partial class Indicator : LukeTabIndicator
+{
+	public Indicator()
+	{
+		InitializeComponent();
+	}
+
+    public override void SelectionItem(int idx)
+    {
+        PART_Circle.TranslateTo (idx * 80, 0);
+    }
+}

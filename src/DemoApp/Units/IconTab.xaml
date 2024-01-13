@@ -7,6 +7,7 @@
     xmlns:units="clr-namespace:Luke.Tabs.UI.Units;assembly=Luke.Tabs"
     x:Name="this">
     <Grid HeightRequest="120">
+     
         <Grid x:Name="PART_IconArea" HorizontalOptions="Center">
             <Path
                 x:Name="PART_Icon"
