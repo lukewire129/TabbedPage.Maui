@@ -38,11 +38,11 @@ public class LukeTabsItem : ContentView
             UpdateCurrent();
         };
     }
-    public void ChangeSelected(bool select)
+    public virtual void ChangeSelected(bool select)
     {
         this.IsSelected = select;
     }
-    void UpdateCurrent()
+    public void UpdateCurrent()
     {
         if (_lukeTabs == null)
             _lukeTabs = this.GetParent<LukeTabs>();

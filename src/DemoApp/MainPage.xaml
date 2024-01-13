@@ -3,19 +3,22 @@
     x:Class="DemoApp.MainPage"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:units="clr-namespace:Luke.Tabs.UI.Units;assembly=Luke.Tabs">
+    xmlns:units="clr-namespace:Luke.Tabs.UI.Units;assembly=Luke.Tabs"
+    xmlns:ctrls="clr-namespace:DemoApp.Units">
     <units:LukeTabs
-        Background="Blue"
+        Background="#DDDDDD"
         CornerRadius="5,5,5,5"
         HeightRequest="120"
         Opacity="0.7"
         WidthRequest="440">
         <units:LukeTabsItems>
-            <units:LukeTabsItem />
-            <units:LukeTabsItem />
-            <units:LukeTabsItem />
-            <units:LukeTabsItem />
+            <ctrls:IconTab  Text="Microsoft" Type="Microsoft" />
+            <ctrls:IconTab Text="Apple" Type="Apple" />
+            <ctrls:IconTab  IsSelected="True"
+                            Text="Google"
+                            Type="Google" />
+            <ctrls:IconTab  Text="Facebook" Type="Facebook" />
+            <ctrls:IconTab Text="Instagram" Type="Instagram" />
         </units:LukeTabsItems>
     </units:LukeTabs>
-
 </ContentPage>

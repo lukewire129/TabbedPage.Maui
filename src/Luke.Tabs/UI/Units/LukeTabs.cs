@@ -66,7 +66,7 @@ public partial class LukeTabs : TemplatedView
     }
 
     [EditorBrowsable(EditorBrowsableState.Never)]
-    internal void UpdateSelectedItem(LukeTabsItem selectedItem, bool isSelected)
+    public void UpdateSelectedItem(LukeTabsItem selectedItem, bool isSelected)
     {
         if (SelectedItem == selectedItem)
             return;
