@@ -6,16 +6,18 @@
     xmlns:ctrls="clr-namespace:DemoApp3.Units"
     xmlns:units="clr-namespace:Luke.Tabs.UI.Units;assembly=Luke.Tabs"
     x:Name="this">
-    <units:LukeTabs HeightRequest="100" WidthRequest="440">
-        <units:LukeTabs.TabsBackground>
+    <units:BottomNavigationBar HeightRequest="100" WidthRequest="440">
+        <units:BottomNavigationBar.TabsBackground>
             <Grid BackgroundColor="#fffdff" />
-        </units:LukeTabs.TabsBackground>
-        <units:LukeTabsItems>
-            <ctrls:IconTab Text="Home" Type="Home" />
-            <ctrls:IconTab Text="Shop" Type="Shop" />
-            <ctrls:IconTab Text="Wishlist" Type="Wishlist" />
-            <ctrls:IconTab Text="Cart" Type="Cart" />
-            <ctrls:IconTab Text="Me" Type="Me" />
-        </units:LukeTabsItems>
-    </units:LukeTabs>
+        </units:BottomNavigationBar.TabsBackground>
+        <units:BottomNavigationBar.Items>
+            <units:BottomNavigationBarItems>
+                <ctrls:IconTab Text="Home" Type="Home" />
+                <ctrls:IconTab Text="Shop" Type="Shop" />
+                <ctrls:IconTab Text="Wishlist" Type="Wishlist" />
+                <ctrls:IconTab Text="Cart" Type="Cart" />
+                <ctrls:IconTab Text="Me" Type="Me" />
+            </units:BottomNavigationBarItems>
+        </units:BottomNavigationBar.Items>
+    </units:BottomNavigationBar>
 </ContentPage>

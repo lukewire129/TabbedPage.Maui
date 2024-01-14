@@ -9,7 +9,7 @@
     xmlns:themes="clr-namespace:Luke.Tabs.Themes.Units"
     mc:Ignorable="d">
     <ResourceDictionary.MergedDictionaries>
-        <themes:LukeTabs />
+        <themes:BottomNavigationBar />
         <!--<themes:LukeTabsItem />-->
     </ResourceDictionary.MergedDictionaries>
 </ResourceDictionary>

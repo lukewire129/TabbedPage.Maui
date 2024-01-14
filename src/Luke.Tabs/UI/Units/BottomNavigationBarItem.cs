@@ -2,15 +2,15 @@
 
 namespace Luke.Tabs.UI.Units;
 
-public class LukeTabsItem : ContentView
+public class BottomNavigationBarItem : ContentView
 {
     public static readonly BindableProperty IsSelectedProperty =
-          BindableProperty.Create(nameof(IsSelected), typeof(bool), typeof(LukeTabsItem), false,
+          BindableProperty.Create(nameof(IsSelected), typeof(bool), typeof(BottomNavigationBarItem), false,
               propertyChanged: (bindable, oldValue, newValue) =>
               {
                   if (oldValue == newValue)
                       return;
-                  var item = bindable as LukeTabsItem;
+                  var item = bindable as BottomNavigationBarItem;
                   item?.UpdateCurrent();
               });
     public bool IsSelected
@@ -19,8 +19,8 @@ public class LukeTabsItem : ContentView
         set { SetValue(IsSelectedProperty, value); }
     }
     public int Index { get;set; }
-    LukeTabs _lukeTabs;
-    public LukeTabsItem()
+    BottomNavigationBar _bar;
+    public BottomNavigationBarItem()
     {
         var textGesturedTap = new TapGestureRecognizer();
         textGesturedTap.Tapped += (s, e) =>
@@ -44,9 +44,9 @@ public class LukeTabsItem : ContentView
     }
     public void UpdateCurrent()
     {
-        if (_lukeTabs == null)
-            _lukeTabs = this.GetParent<LukeTabs>();
+        if (_bar == null)
+            _bar = this.GetParent<BottomNavigationBar> ();
 
-        _lukeTabs?.UpdateSelectedItem(this, IsSelected);
+        _bar?.UpdateSelectedItem(this, IsSelected);
     }
 }

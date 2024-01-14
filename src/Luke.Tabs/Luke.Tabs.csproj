@@ -19,11 +19,17 @@
 	</PropertyGroup>
 
 	<ItemGroup>
+	  <AndroidResource Remove="Themes\Views\**" />
 	  <AndroidResource Remove="UI\Views\**" />
+	  <Compile Remove="Themes\Views\**" />
 	  <Compile Remove="UI\Views\**" />
+	  <EmbeddedResource Remove="Themes\Views\**" />
 	  <EmbeddedResource Remove="UI\Views\**" />
+	  <MauiCss Remove="Themes\Views\**" />
 	  <MauiCss Remove="UI\Views\**" />
+	  <MauiXaml Remove="Themes\Views\**" />
 	  <MauiXaml Remove="UI\Views\**" />
+	  <None Remove="Themes\Views\**" />
 	  <None Remove="UI\Views\**" />
 	</ItemGroup>
 
@@ -41,14 +47,16 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Folder Include="Themes\Views\" />
+	  <Compile Update="Themes\Units\BottomNavigationBar.xaml.cs">
+	    <DependentUpon>BottomNavigationBar.xaml</DependentUpon>
+	  </Compile>
 	</ItemGroup>
 
 	<ItemGroup>
 	  <MauiXaml Update="Themes\Generic.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Themes\Units\LukeTabs.xaml">
+	  <MauiXaml Update="Themes\Units\BottomNavigationBar.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>

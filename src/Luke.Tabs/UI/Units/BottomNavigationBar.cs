@@ -2,37 +2,34 @@
 
 namespace Luke.Tabs.UI.Units;
 
-[ContentProperty(nameof(Items))]
-public partial class LukeTabs : TemplatedView
+public partial class BottomNavigationBar : TemplatedView
 {
-
-    
-    public static readonly BindableProperty ItemsProperty = BindableProperty.Create(nameof(Items), typeof(LukeTabsItems), typeof(LukeTabs), default(LukeTabsItems), propertyChanged: OnItemsChanged);
+    public static readonly BindableProperty ItemsProperty = BindableProperty.Create(nameof(Items), typeof(BottomNavigationBarItems), typeof(BottomNavigationBar), default(BottomNavigationBarItems), propertyChanged: OnItemsChanged);
 
     static void OnItemsChanged(BindableObject bindable, object oldValue, object newValue)
     {
-        (bindable as LukeTabs)?.UpdateItems();
+        (bindable as BottomNavigationBar)?.UpdateItems();
     }
 
-    public LukeTabsItems Items
+    public BottomNavigationBarItems Items
     {
-        get => (LukeTabsItems)GetValue(ItemsProperty);
+        get => (BottomNavigationBarItems)GetValue(ItemsProperty);
         set => SetValue(ItemsProperty, value);
     }
 
     public static readonly BindableProperty SelectedItemProperty =
-            BindableProperty.Create(nameof(SelectedItem), typeof(LukeTabsItem), typeof(LukeTabs), null);
+            BindableProperty.Create(nameof(SelectedItem), typeof(BottomNavigationBarItem), typeof(BottomNavigationBar), null);
 
-    public LukeTabsItem SelectedItem
+    public BottomNavigationBarItem SelectedItem
     {
-        get => (LukeTabsItem)GetValue(SelectedItemProperty);
+        get => (BottomNavigationBarItem)GetValue(SelectedItemProperty);
         set { SetValue(SelectedItemProperty, value); }
     }
 
     public static readonly BindableProperty IndicatorProperty =
-            BindableProperty.Create (nameof (Indicator), typeof (View), typeof (LukeTabs), propertyChanged:(bindable, oldValue, newValue)=>
+            BindableProperty.Create (nameof (Indicator), typeof (View), typeof (BottomNavigationBar), propertyChanged:(bindable, oldValue, newValue)=>
             {
-                (bindable as LukeTabs)?.UpdateIndicator ();
+                (bindable as BottomNavigationBar)?.UpdateIndicator ();
             });
 
     public View Indicator
@@ -41,9 +38,9 @@ public partial class LukeTabs : TemplatedView
         set { SetValue (IndicatorProperty, value); }
     }
     public static readonly BindableProperty TabsBackgroundProperty =
-            BindableProperty.Create (nameof (TabsBackground), typeof (View), typeof (LukeTabs), propertyChanged: (bindable, oldValue, newValue) =>
+            BindableProperty.Create (nameof (TabsBackground), typeof (View), typeof (BottomNavigationBar), propertyChanged: (bindable, oldValue, newValue) =>
             {
-                (bindable as LukeTabs)?.UpdateBackground ();
+                (bindable as BottomNavigationBar)?.UpdateBackground ();
             });
 
     public View TabsBackground
@@ -115,7 +112,7 @@ public partial class LukeTabs : TemplatedView
     }
 
     [EditorBrowsable(EditorBrowsableState.Never)]
-    public void UpdateSelectedItem(LukeTabsItem selectedItem, bool isSelected)
+    public void UpdateSelectedItem(BottomNavigationBarItem selectedItem, bool isSelected)
     {
         if (SelectedItem == selectedItem)
             return;
@@ -125,13 +122,13 @@ public partial class LukeTabs : TemplatedView
 
         SelectedItem = selectedItem;
 
-        if(_indicator.Content is LukeTabIndicator indicator)
+        if(_indicator.Content is BottomNavigationBarIndicator indicator)
         {
             indicator.SelectionItem (selectedItem.Index);            
         }
     }
 
-    void UnSelectItems(LukeTabsItems items)
+    void UnSelectItems(BottomNavigationBarItems items)
     {
         foreach (var child in items)
         {

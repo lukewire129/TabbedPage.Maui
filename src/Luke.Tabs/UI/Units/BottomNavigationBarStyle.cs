@@ -3,9 +3,9 @@ using System.ComponentModel;
 
 namespace Luke.Tabs.UI.Units;
 
-public partial class LukeTabs : TemplatedView
+public partial class BottomNavigationBar : TemplatedView
 {
-    public static new readonly BindableProperty PaddingProperty = BindableProperty.Create (nameof (Padding), typeof (Thickness), typeof (LukeTabs), new Thickness());
+    public static new readonly BindableProperty PaddingProperty = BindableProperty.Create (nameof (Padding), typeof (Thickness), typeof (BottomNavigationBar), new Thickness());
     [TypeConverter (typeof (BrushTypeConverter))]
     public new Thickness Padding
     {

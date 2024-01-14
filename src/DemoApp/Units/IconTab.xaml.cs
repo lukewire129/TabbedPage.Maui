@@ -14,7 +14,7 @@ public enum Type
     None,
 }
 
-public partial class IconTab : LukeTabsItem
+public partial class IconTab : BottomNavigationBarItem
 {
     public static readonly BindableProperty TextProperty =
         BindableProperty.Create(nameof(Text), typeof(string), typeof(IconTab), default(string));
@@ -82,7 +82,7 @@ public partial class IconTab : LukeTabsItem
     {
         MarginAnimation MarginAnimation = new MarginAnimation ();
         MarginAnimation.Target = PART_Icon;
-        MarginAnimation.To = new Thickness(15, -65, 0, 0);
+        MarginAnimation.To = new Thickness(23, -60, 0, 0);
         MarginAnimation.Duration = "500";
 
         FillAnimation animation = new FillAnimation ();
@@ -100,7 +100,7 @@ public partial class IconTab : LukeTabsItem
     {
         MarginAnimation MarginAnimation = new MarginAnimation ();
         MarginAnimation.Target = PART_Icon;
-        MarginAnimation.To = new Thickness (15, 0, 0, 0);
+        MarginAnimation.To = new Thickness (23, 0, 0, 0);
         MarginAnimation.Duration = "500";
 
         FillAnimation animation = new FillAnimation ();

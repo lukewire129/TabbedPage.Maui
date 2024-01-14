@@ -14,7 +14,7 @@ public enum Type
     None,
 }
 
-public partial class IconTab : LukeTabsItem
+public partial class IconTab : BottomNavigationBarItem
 {
     public static readonly BindableProperty TextProperty =
         BindableProperty.Create(nameof(Text), typeof(string), typeof(IconTab), default(string));

@@ -1,8 +1,8 @@
 ﻿namespace Luke.Tabs.Themes.Units
 {
-    public partial class LukeTabs : ResourceDictionary
+    public partial class BottomNavigationBar : ResourceDictionary
     {
-        public LukeTabs()
+        public BottomNavigationBar()
         {
             InitializeComponent ();
         }

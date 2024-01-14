@@ -4,16 +4,16 @@ using System.Collections.Specialized;
 
 namespace Luke.Tabs.UI.Units;
 
-public class LukeTabsItems : Element, IList<LukeTabsItem>, INotifyCollectionChanged
+public class BottomNavigationBarItems : Element, IList<BottomNavigationBarItem>, INotifyCollectionChanged
 {
-    readonly ObservableCollection<LukeTabsItem> _items;
+    readonly ObservableCollection<BottomNavigationBarItem> _items;
 
-    public LukeTabsItems(IEnumerable<LukeTabsItem> items)
+    public BottomNavigationBarItems(IEnumerable<BottomNavigationBarItem> items)
     {
-        _items = new ObservableCollection<LukeTabsItem>(items) ?? throw new ArgumentNullException(nameof(items));
+        _items = new ObservableCollection<BottomNavigationBarItem>(items) ?? throw new ArgumentNullException(nameof(items));
         _items.CollectionChanged += OnItemsChanged;
     }
-    public LukeTabsItems() : this(Enumerable.Empty<LukeTabsItem>())
+    public BottomNavigationBarItems() : this(Enumerable.Empty<BottomNavigationBarItem>())
     {
 
     }
@@ -24,7 +24,7 @@ public class LukeTabsItems : Element, IList<LukeTabsItem>, INotifyCollectionChan
         remove { _items.CollectionChanged -= value; }
     }
 
-    public LukeTabsItem this[int index]
+    public BottomNavigationBarItem this[int index]
     {
         get => _items.Count > index ? _items[index] : null;
         set => _items[index] = value;
@@ -34,7 +34,7 @@ public class LukeTabsItems : Element, IList<LukeTabsItem>, INotifyCollectionChan
 
     public bool IsReadOnly => false;
 
-    public void Add(LukeTabsItem item)
+    public void Add(BottomNavigationBarItem item)
     {
         _items.Add(item);
     }
@@ -44,32 +44,32 @@ public class LukeTabsItems : Element, IList<LukeTabsItem>, INotifyCollectionChan
         _items.Clear();
     }
 
-    public bool Contains(LukeTabsItem item)
+    public bool Contains(BottomNavigationBarItem item)
     {
         return _items.Contains(item);
     }
 
-    public void CopyTo(LukeTabsItem[] array, int arrayIndex)
+    public void CopyTo(BottomNavigationBarItem[] array, int arrayIndex)
     {
         _items.CopyTo(array, arrayIndex);
     }
 
-    public IEnumerator<LukeTabsItem> GetEnumerator()
+    public IEnumerator<BottomNavigationBarItem> GetEnumerator()
     {
         return _items.GetEnumerator();
     }
 
-    public int IndexOf(LukeTabsItem item)
+    public int IndexOf(BottomNavigationBarItem item)
     {
         return _items.IndexOf(item);
     }
 
-    public void Insert(int index, LukeTabsItem item)
+    public void Insert(int index, BottomNavigationBarItem item)
     {
         _items.Insert(index, item);
     }
 
-    public bool Remove(LukeTabsItem item)
+    public bool Remove(BottomNavigationBarItem item)
     {
         return _items.Remove(item);
     }

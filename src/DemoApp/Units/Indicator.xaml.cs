@@ -2,7 +2,7 @@ using Luke.Tabs.UI.Units;
 
 namespace DemoApp.Units;
 
-public partial class Indicator : LukeTabIndicator
+public partial class Indicator : BottomNavigationBarIndicator
 {
 	public Indicator()
 	{
