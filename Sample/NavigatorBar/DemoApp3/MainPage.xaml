@@ -5,8 +5,13 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:ctrls="clr-namespace:DemoApp3.Units"
     xmlns:units="clr-namespace:TabbedPage.Maui.UI.Units;assembly=TabbedPage.Maui"
-    x:Name="this">
-    <units:BottomNavigationBar HeightRequest="100" WidthRequest="440">
+    x:Name="this"
+    Background="#222222"
+    WidthRequest="440">
+    <units:BottomNavigationBar
+        HeightRequest="100"
+        VerticalOptions="End"
+        WidthRequest="440">
         <units:BottomNavigationBar.TabsBackground>
             <Grid BackgroundColor="#fffdff" />
         </units:BottomNavigationBar.TabsBackground>
