@@ -11,3 +11,10 @@ The creation and implementation of an innovative NavigationBar is the cornerston
 
 ### Next Steps: Implementing and Integrating the NavigationBar
 Once the development of the NavigationBar samples is complete, we plan to integrate them into the TabbedPage.Maui project. This process will focus on optimizing user experience and maximizing the efficiency and intuitiveness of the interface.
+
+## DemoApp
+![Screenshot 2024-01-25 at 18 22 03](https://github.com/lukewire129/TabbedPage.Maui/assets/54387261/aad7d9fc-8580-4719-9ca7-62283bcf6932)
+## DemoApp2
+![Screenshot 2024-01-25 at 18 23 48](https://github.com/lukewire129/TabbedPage.Maui/assets/54387261/a4befb5a-0e05-4583-bc29-281b74f6c91a)
+## DemoApp3
+![Screenshot 2024-01-25 at 18 24 40](https://github.com/lukewire129/TabbedPage.Maui/assets/54387261/b67822e8-46bf-4127-a370-c118015893ee)
