@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoApp4", "..\Sample\Navig
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TabbedPageSample", "TabbedPageSample", "{B8979CD8-9683-4BB5-8C97-037351CC868E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LukeTabbepdPage", "LukeTabbepdPage\LukeTabbepdPage.csproj", "{2CED58AD-E9E3-4124-AA97-24448F80739D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,12 @@ Global
 		{4E183AC4-1CD6-4564-BA94-CF290677D408}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4E183AC4-1CD6-4564-BA94-CF290677D408}.Release|Any CPU.Build.0 = Release|Any CPU
 		{4E183AC4-1CD6-4564-BA94-CF290677D408}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{2CED58AD-E9E3-4124-AA97-24448F80739D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2CED58AD-E9E3-4124-AA97-24448F80739D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2CED58AD-E9E3-4124-AA97-24448F80739D}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{2CED58AD-E9E3-4124-AA97-24448F80739D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2CED58AD-E9E3-4124-AA97-24448F80739D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2CED58AD-E9E3-4124-AA97-24448F80739D}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -60,6 +68,7 @@ Global
 		{0171B5A6-37D6-4D5A-9A19-F9616A151CC1} = {CCE87034-6486-4BD3-BBE9-0F5D5AE46349}
 		{50158381-B06A-40C8-8333-2AB0D9C145C0} = {CCE87034-6486-4BD3-BBE9-0F5D5AE46349}
 		{4E183AC4-1CD6-4564-BA94-CF290677D408} = {CCE87034-6486-4BD3-BBE9-0F5D5AE46349}
+		{2CED58AD-E9E3-4124-AA97-24448F80739D} = {B8979CD8-9683-4BB5-8C97-037351CC868E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {98152882-0985-4D3F-B1B4-2C3466A5EF77}
