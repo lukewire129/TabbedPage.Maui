@@ -24,30 +24,16 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Compile Update="Themes\Units\BottomNavigationBar.xaml.cs">
-	    <DependentUpon>BottomNavigationBar.xaml</DependentUpon>
-	  </Compile>
-	  <Compile Update="Themes\Views\LukeTabbedPage.xaml.cs">
-	    <DependentUpon>LukeTabbedPage.xaml</DependentUpon>
-	  </Compile>
-	  <Compile Update="UI\Views\1.xaml.cs">
-	    <DependentUpon>1.xaml</DependentUpon>
-	  </Compile>
-	</ItemGroup>
-
-	<ItemGroup>
 	  <MauiXaml Update="Themes\Generic.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Themes\Units\BottomNavigationBar.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Themes\Views\LukeTabbedPage.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
-	  <MauiXaml Update="UI\Views\1.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="Themes\Views\" />
 	</ItemGroup>
 
 </Project>

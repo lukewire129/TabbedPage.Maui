@@ -103,7 +103,7 @@ public partial class BottomNavigationBar : TemplatedView
                 _container.Children.Add(child);
             }
         }
-        if (this._indicator.Content == null)
+        if (this._indicator == null)
             return;
         IndicatorUpdate ();
     }
@@ -119,7 +119,7 @@ public partial class BottomNavigationBar : TemplatedView
     {
 
     }
-
+    public Action<int> SelectedIndex { get; set; }
     [EditorBrowsable(EditorBrowsableState.Never)]
     public void UpdateSelectedItem(BottomNavigationBarItem selectedItem, bool isSelected)
     {
@@ -135,6 +135,7 @@ public partial class BottomNavigationBar : TemplatedView
         {
             indicator.SelectionItem (selectedItem.Index);            
         }
+        SelectedIndex?.Invoke (selectedItem.Index);
     }
 
     void UnSelectItems(BottomNavigationBarItems items)
