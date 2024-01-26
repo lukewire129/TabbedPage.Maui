@@ -18,21 +18,6 @@
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'tizen'">6.5</SupportedOSPlatformVersion>
 	</PropertyGroup>
 
-	<ItemGroup>
-	  <AndroidResource Remove="Themes\Views\**" />
-	  <AndroidResource Remove="UI\Views\**" />
-	  <Compile Remove="Themes\Views\**" />
-	  <Compile Remove="UI\Views\**" />
-	  <EmbeddedResource Remove="Themes\Views\**" />
-	  <EmbeddedResource Remove="UI\Views\**" />
-	  <MauiCss Remove="Themes\Views\**" />
-	  <MauiCss Remove="UI\Views\**" />
-	  <MauiXaml Remove="Themes\Views\**" />
-	  <MauiXaml Remove="UI\Views\**" />
-	  <None Remove="Themes\Views\**" />
-	  <None Remove="UI\Views\**" />
-	</ItemGroup>
-
   <ItemGroup>
 		<PackageReference Include="Microsoft.Maui.Controls" Version="8.0.6" />
 		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="8.0.6" />
@@ -42,6 +27,12 @@
 	  <Compile Update="Themes\Units\BottomNavigationBar.xaml.cs">
 	    <DependentUpon>BottomNavigationBar.xaml</DependentUpon>
 	  </Compile>
+	  <Compile Update="Themes\Views\LukeTabbedPage.xaml.cs">
+	    <DependentUpon>LukeTabbedPage.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="UI\Views\1.xaml.cs">
+	    <DependentUpon>1.xaml</DependentUpon>
+	  </Compile>
 	</ItemGroup>
 
 	<ItemGroup>
@@ -49,6 +40,12 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Themes\Units\BottomNavigationBar.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Themes\Views\LukeTabbedPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="UI\Views\1.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>
