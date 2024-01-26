@@ -15,6 +15,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NavigatorBar", "NavigatorBa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoApp4", "..\Sample\NavigatorBar\DemoApp4\DemoApp4.csproj", "{4E183AC4-1CD6-4564-BA94-CF290677D408}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TabbedPageSample", "TabbedPageSample", "{B8979CD8-9683-4BB5-8C97-037351CC868E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
