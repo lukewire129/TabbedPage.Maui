@@ -18,3 +18,5 @@ Once the development of the NavigationBar samples is complete, we plan to integr
 ![Screenshot 2024-01-25 at 18 23 48](https://github.com/lukewire129/TabbedPage.Maui/assets/54387261/a4befb5a-0e05-4583-bc29-281b74f6c91a)
 ## DemoApp3
 ![Screenshot 2024-01-25 at 18 24 40](https://github.com/lukewire129/TabbedPage.Maui/assets/54387261/b67822e8-46bf-4127-a370-c118015893ee)
+## DemoApp4('X' Service ScrollDown Navi Opacity)
+![Screenshot 2024-01-26 at 11 25 29](https://github.com/lukewire129/TabbedPage.Maui/assets/54387261/19e5f3b7-e201-49fb-a019-271d1a9f4984)
