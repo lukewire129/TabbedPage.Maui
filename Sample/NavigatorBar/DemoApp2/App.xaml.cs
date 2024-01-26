@@ -7,9 +7,6 @@ namespace DemoApp2
         public App()
         {
             InitializeComponent ();
-            var templateMAUIDictionary = new Generic ();
-            if (!Application.Current.Resources.MergedDictionaries.Contains (templateMAUIDictionary))
-                Application.Current.Resources.Add (templateMAUIDictionary);
             MainPage = new MainPage ();
         }
     }
