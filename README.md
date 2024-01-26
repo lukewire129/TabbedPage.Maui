@@ -13,8 +13,21 @@ The creation and implementation of an innovative NavigationBar is the cornerston
 Once the development of the NavigationBar samples is complete, we plan to integrate them into the TabbedPage.Maui project. This process will focus on optimizing user experience and maximizing the efficiency and intuitiveness of the interface.
 
 ## DemoApp
-![Screenshot 2024-01-25 at 18 22 03](https://github.com/lukewire129/TabbedPage.Maui/assets/54387261/aad7d9fc-8580-4719-9ca7-62283bcf6932)
+<br/>
+<img src="https://github.com/lukewire129/TabbedPage.Maui/assets/54387261/aad7d9fc-8580-4719-9ca7-62283bcf6932" width="250" Height="400"/>
+<br/>
+
 ## DemoApp2
-![Screenshot 2024-01-25 at 18 23 48](https://github.com/lukewire129/TabbedPage.Maui/assets/54387261/a4befb5a-0e05-4583-bc29-281b74f6c91a)
+<br/>
+<img src="https://github.com/lukewire129/TabbedPage.Maui/assets/54387261/a4befb5a-0e05-4583-bc29-281b74f6c91a" width="250" Height="400"/>
+<br/>
+
 ## DemoApp3
-![Screenshot 2024-01-25 at 18 24 40](https://github.com/lukewire129/TabbedPage.Maui/assets/54387261/b67822e8-46bf-4127-a370-c118015893ee)
+<br/>
+<img src="https://github.com/lukewire129/TabbedPage.Maui/assets/54387261/b67822e8-46bf-4127-a370-c118015893ee" width="250" Height="400"/>
+<br/>
+
+## DemoApp4('X' Service ScrollDown Navi Opacity)
+<br/>
+<img src="https://github.com/lukewire129/TabbedPage.Maui/assets/54387261/19e5f3b7-e201-49fb-a019-271d1a9f4984" width="250" Height="400"/>
+<br/>
