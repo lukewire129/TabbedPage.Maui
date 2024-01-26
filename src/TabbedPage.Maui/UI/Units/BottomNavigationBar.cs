@@ -59,16 +59,24 @@ public partial class BottomNavigationBar : TemplatedView
         _tabsBackground = GetTemplateChild ("PART_TabsBackground") as ContentView;
         _indicator = GetTemplateChild ("PART_Indicator") as ContentView;
         _container = GetTemplateChild("PART_Grd") as Grid;
+
+        UpdateIndicator ();
+        UpdateBackground ();
+        UpdateItems ();
     }
     void UpdateIndicator()
     {
         if (Indicator == null)
+            return;
+        if (this._indicator == null)
             return;
         this._indicator.Content = Indicator;
     }
     void UpdateBackground()
     {
         if (TabsBackground == null)
+            return;
+        if (this._tabsBackground == null)
             return;
         this._tabsBackground.Content = TabsBackground;
     }
@@ -77,7 +85,8 @@ public partial class BottomNavigationBar : TemplatedView
     {
         if (Items == null || Items.Count == 0)
             return;
-
+        if (this._container == null)
+            return;
         List<ColumnDefinition> def = new List<ColumnDefinition>();
         for (int i = 0; i < Items.Count; i++)
         {
