@@ -7,7 +7,6 @@
     xmlns:units="clr-namespace:TabbedPage.Maui.UI.Units;assembly=TabbedPage.Maui"
     Background="#222222"
     WidthRequest="440">
-
     <Grid>
         <CollectionView x:Name="items" Scrolled="items_Scrolled">
             <CollectionView.ItemTemplate>
