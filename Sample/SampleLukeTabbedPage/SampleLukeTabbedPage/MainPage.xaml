@@ -7,6 +7,13 @@
     xmlns:pages="clr-namespace:SampleLukeTabbedPage.Pages"
     xmlns:units="clr-namespace:TabbedPage.Maui.UI.Units;assembly=TabbedPage.Maui"
     xmlns:views="clr-namespace:TabbedPage.Maui.UI.Views;assembly=TabbedPage.Maui">
+    <views:LukeTabbedPageItems>
+        <pages:AContent />
+        <pages:BContent />
+        <pages:CContent />
+        <pages:DContent />
+        <pages:EContent />
+    </views:LukeTabbedPageItems>
     <views:LukeTabbedPage.NavigatorBarStyle>
         <units:BottomNavigationBar
             x:Name="navi"
@@ -27,11 +34,4 @@
             </units:BottomNavigationBar.Items>
         </units:BottomNavigationBar>
     </views:LukeTabbedPage.NavigatorBarStyle>
-    <views:LukeTabbedPageItems>
-        <pages:AContent />
-        <pages:BContent />
-        <pages:CContent />
-        <pages:DContent />
-        <pages:EContent />
-    </views:LukeTabbedPageItems>
 </views:LukeTabbedPage>
