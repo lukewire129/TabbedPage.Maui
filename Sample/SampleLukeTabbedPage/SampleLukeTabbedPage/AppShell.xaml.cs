@@ -1,4 +1,4 @@
-﻿namespace SampleLukeTabbedPage
+﻿namespace SampleLazyTabbedPage
 {
     public partial class AppShell : Shell
     {

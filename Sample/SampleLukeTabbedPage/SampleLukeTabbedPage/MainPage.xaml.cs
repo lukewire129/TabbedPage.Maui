@@ -1,7 +1,7 @@
 ﻿using TabbedPage.Maui.UI.Views;
-namespace SampleLukeTabbedPage
+namespace SampleLazyTabbedPage
 {
-    public partial class MainPage : LukeTabbedPage
+    public partial class MainPage : LazyTabbedPage
     {
 
         public MainPage()

@@ -1,7 +1,7 @@
 ﻿using ObjCRuntime;
 using UIKit;
 
-namespace SampleLukeTabbedPage
+namespace SampleLazyTabbedPage
 {
     public class Program
     {

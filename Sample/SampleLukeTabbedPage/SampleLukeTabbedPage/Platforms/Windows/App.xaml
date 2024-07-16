@@ -1,8 +1,8 @@
 ﻿<maui:MauiWinUIApplication
-    x:Class="SampleLukeTabbedPage.WinUI.App"
+    x:Class="SampleLazyTabbedPage.WinUI.App"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:maui="using:Microsoft.Maui"
-    xmlns:local="using:SampleLukeTabbedPage.WinUI">
+    xmlns:local="using:SampleLazyTabbedPage.WinUI">
 
 </maui:MauiWinUIApplication>

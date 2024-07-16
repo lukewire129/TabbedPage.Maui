@@ -1,4 +1,4 @@
-namespace SampleLukeTabbedPage.Pages;
+namespace SampleLazyTabbedPage.Pages;
 
 public partial class DContent : ContentView
 {

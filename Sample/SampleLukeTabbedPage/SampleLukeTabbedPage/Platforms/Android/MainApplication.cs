@@ -1,7 +1,7 @@
 ﻿using Android.App;
 using Android.Runtime;
 
-namespace SampleLukeTabbedPage
+namespace SampleLazyTabbedPage
 {
     [Application]
     public class MainApplication : MauiApplication

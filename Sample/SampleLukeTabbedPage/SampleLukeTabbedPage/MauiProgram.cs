@@ -2,7 +2,7 @@
 using Microsoft.Extensions.Logging;
 using TabbedPage.Maui;
 
-namespace SampleLukeTabbedPage
+namespace SampleLazyTabbedPage
 {
     public static class MauiProgram
     {

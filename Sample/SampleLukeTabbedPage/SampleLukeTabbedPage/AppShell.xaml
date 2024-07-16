@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <Shell
-    x:Class="SampleLukeTabbedPage.AppShell"
+    x:Class="SampleLazyTabbedPage.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:SampleLukeTabbedPage"
+    xmlns:local="clr-namespace:SampleLazyTabbedPage"
     Shell.FlyoutBehavior="Disabled"
-    Title="SampleLukeTabbedPage">
+    Title="SampleLazyTabbedPage">
 
     <ShellContent
         Title="Home"

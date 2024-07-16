@@ -1,6 +1,6 @@
 ﻿using Foundation;
 
-namespace SampleLukeTabbedPage
+namespace SampleLazyTabbedPage
 {
     [Register ("AppDelegate")]
     public class AppDelegate : MauiUIApplicationDelegate

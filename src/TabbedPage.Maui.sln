@@ -17,7 +17,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DemoApp4", "..\Sample\Navig
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TabbedPageSample", "TabbedPageSample", "{B8979CD8-9683-4BB5-8C97-037351CC868E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SampleLukeTabbedPage", "..\Sample\SampleLukeTabbedPage\SampleLukeTabbedPage\SampleLukeTabbedPage.csproj", "{9B2D2659-176F-435F-8B94-069F9B3E79A3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SampleLazyTabbedPage", "..\Sample\SampleLukeTabbedPage\SampleLukeTabbedPage\SampleLazyTabbedPage.csproj", "{9B2D2659-176F-435F-8B94-069F9B3E79A3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
