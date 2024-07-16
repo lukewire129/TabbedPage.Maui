@@ -4,16 +4,16 @@ using System.Collections.Specialized;
 
 namespace TabbedPage.Maui.UI.Views;
 
-public class LukeTabbedPageItems : Element, IList<ContentView>, INotifyCollectionChanged
+public class LazyTabbedPageItems : Element, IList<ContentView>, INotifyCollectionChanged
 {
     readonly ObservableCollection<ContentView> _items;
 
-    public LukeTabbedPageItems(IEnumerable<ContentView> items)
+    public LazyTabbedPageItems(IEnumerable<ContentView> items)
     {
         _items = new ObservableCollection<ContentView> (items) ?? throw new ArgumentNullException (nameof (items));
         _items.CollectionChanged += OnItemsChanged;
     }
-    public LukeTabbedPageItems() : this (Enumerable.Empty<ContentView> ())
+    public LazyTabbedPageItems() : this (Enumerable.Empty<ContentView> ())
     {
 
     }

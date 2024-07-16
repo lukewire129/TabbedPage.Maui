@@ -1,6 +1,6 @@
 ﻿using TabbedPage.Maui.UI.Units;
 
-namespace SampleLukeTabbedPage.Units;
+namespace SampleLazyTabbedPage.Units;
 
 public enum Type
 {

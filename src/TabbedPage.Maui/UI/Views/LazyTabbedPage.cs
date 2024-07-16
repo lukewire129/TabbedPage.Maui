@@ -5,15 +5,15 @@ using TabbedPage.Maui.UI.Units;
 namespace TabbedPage.Maui.UI.Views
 {
     [ContentProperty (nameof (Items))]
-    public partial class LukeTabbedPage : ContentPage, IContentView
+    public partial class LazyTabbedPage : ContentPage, IContentView
     {
         public static readonly BindableProperty SelectedItemProperty =
-           BindableProperty.Create (nameof (SelectedItem), typeof (ContentView), typeof (LukeTabbedPage), null, BindingMode.TwoWay);
+           BindableProperty.Create (nameof (SelectedItem), typeof (ContentView), typeof (LazyTabbedPage), null, BindingMode.TwoWay);
 
         public static readonly BindableProperty NavigatorBarStyleProperty =
-                BindableProperty.Create (nameof (NavigatorBarStyle), typeof (View), typeof (LukeTabbedPage), default (View), propertyChanged : (bindalble, oldValue, newValue)=>
+                BindableProperty.Create (nameof (NavigatorBarStyle), typeof (View), typeof (LazyTabbedPage), default (View), propertyChanged : (bindalble, oldValue, newValue)=>
                 {
-                    var parent = ((LukeTabbedPage)bindalble);
+                    var parent = ((LazyTabbedPage)bindalble);
                     if(oldValue != null)
                     {
                         ((BottomNavigationBar)oldValue).SelectedIndex = null;
@@ -28,7 +28,7 @@ namespace TabbedPage.Maui.UI.Views
         private Grid _grd;
         private ContentView maincv;
         private ContentView Navicv;
-        public LukeTabbedPage()
+        public LazyTabbedPage()
         {
             _grd = new ();
             maincv = new ();
@@ -47,17 +47,17 @@ namespace TabbedPage.Maui.UI.Views
             set { SetValue (NavigatorBarStyleProperty, value); }
         }
 
-        public static readonly BindableProperty ItemsProperty = BindableProperty.Create (nameof (Items), typeof (LukeTabbedPageItems), typeof (LukeTabbedPage), default (LukeTabbedPageItems), propertyChanged: OnChildrenChanged);
+        public static readonly BindableProperty ItemsProperty = BindableProperty.Create (nameof (Items), typeof (LazyTabbedPageItems), typeof (LazyTabbedPage), default (LazyTabbedPageItems), propertyChanged: OnChildrenChanged);
 
-        public LukeTabbedPageItems Items
+        public LazyTabbedPageItems Items
         {
-            get => (LukeTabbedPageItems)GetValue (ItemsProperty);
+            get => (LazyTabbedPageItems)GetValue (ItemsProperty);
             set => SetValue (ItemsProperty, value);
         }
 
         static void OnChildrenChanged(BindableObject bindable, object oldValue, object newValue)
         {
-            var page = (LukeTabbedPage)bindable;
+            var page = (LazyTabbedPage)bindable;
             page.ChildrenChanged (null, null);
         }
         void ChildrenChanged(object sender, NotifyCollectionChangedEventArgs e)
