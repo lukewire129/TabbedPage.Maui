@@ -1,6 +1,6 @@
 ﻿using MauiIcons.Material.Outlined;
 using Microsoft.Extensions.Logging;
-using LazyTabbedPage.Maui;
+using TabbedPage.Maui;
 
 namespace DemoApp3
 {
