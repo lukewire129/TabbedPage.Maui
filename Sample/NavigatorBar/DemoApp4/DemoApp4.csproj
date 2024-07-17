@@ -64,7 +64,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <ProjectReference Include="..\..\..\src\TabbedPage.Maui\TabbedPage.Maui.csproj" />
+	  <ProjectReference Include="..\..\..\src\LazyTabbedPage.Maui\LazyTabbedPage.Maui.csproj" />
 	</ItemGroup>
 
 	<ItemGroup>

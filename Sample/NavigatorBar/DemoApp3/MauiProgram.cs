@@ -1,6 +1,6 @@
 ﻿using MauiIcons.Material.Outlined;
 using Microsoft.Extensions.Logging;
-using TabbedPage.Maui;
+using LazyTabbedPage.Maui;
 
 namespace DemoApp3
 {
@@ -12,7 +12,7 @@ namespace DemoApp3
             builder
                 .UseMauiApp<App> ()
                 .UseMaterialOutlinedMauiIcons ()
-                .UseCustomTabbedPage()
+                .UseLazyTabbedPage()
                 .ConfigureFonts (fonts =>
                 {
                     fonts.AddFont ("OpenSans-Regular.ttf", "OpenSansRegular");

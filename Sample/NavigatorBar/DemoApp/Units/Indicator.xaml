@@ -3,7 +3,7 @@
     x:Class="DemoApp.Units.Indicator"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:units="clr-namespace:TabbedPage.Maui.UI.Units;assembly=TabbedPage.Maui"
+    xmlns:units="clr-namespace:LazyTabbedPage.Maui.UI.Units;assembly=LazyTabbedPage.Maui"
     x:Name="this"
     Margin="20,0">
     <Grid

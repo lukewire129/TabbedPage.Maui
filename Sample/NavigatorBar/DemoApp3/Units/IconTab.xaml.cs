@@ -1,5 +1,5 @@
 using AlohaKit.Animations;
-using TabbedPage.Maui.UI.Units;
+using LazyTabbedPage.Maui.UI.Units;
 using DemoApp3.Animations;
 using AlohaKit.Animations.Triggers;
 namespace DemoApp3.Units;

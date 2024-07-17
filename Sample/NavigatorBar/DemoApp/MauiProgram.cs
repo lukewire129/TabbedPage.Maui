@@ -1,5 +1,5 @@
 ﻿using Microsoft.Extensions.Logging;
-using TabbedPage.Maui;
+using LazyTabbedPage.Maui;
 namespace DemoApp
 {
     public static class MauiProgram
@@ -9,7 +9,7 @@ namespace DemoApp
             var builder = MauiApp.CreateBuilder ();
             builder
                 .UseMauiApp<App> ()
-                .UseCustomTabbedPage ()
+                .UseLazyTabbedPage ()
                 .ConfigureFonts (fonts =>
                 {
                     fonts.AddFont ("OpenSans-Regular.ttf", "OpenSansRegular");
