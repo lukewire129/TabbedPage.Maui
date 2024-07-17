@@ -1,4 +1,4 @@
-using LazyTabbedPage.Maui.UI.Units;
+using TabbedPage.Maui.UI.Units;
 
 namespace DemoApp.Units;
 

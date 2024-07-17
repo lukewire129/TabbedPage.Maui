@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.Logging;
 using MauiIcons.Material.Outlined;
-using LazyTabbedPage.Maui;
+using TabbedPage.Maui;
 namespace DemoApp2
 {
     public static class MauiProgram
