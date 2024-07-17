@@ -1,4 +1,4 @@
-﻿using TabbedPage.Maui.Themes;
+﻿using LazyTabbedPage.Maui.Themes;
 
 namespace DemoApp3
 {
