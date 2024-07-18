@@ -14,7 +14,7 @@
         <pages:DContent />
         <pages:EContent />
     </views:LazyTabbedPageItems>
-    <views:LazyTabbedPage.NavigatorBarStyle>
+    <views:LazyTabbedPage.NavigatorBar>
         <units:BottomNavigationBar
             x:Name="navi"
             HeightRequest="100"
@@ -33,5 +33,5 @@
                 </units:BottomNavigationBarItems>
             </units:BottomNavigationBar.Items>
         </units:BottomNavigationBar>
-    </views:LazyTabbedPage.NavigatorBarStyle>
+    </views:LazyTabbedPage.NavigatorBar>
 </views:LazyTabbedPage>
