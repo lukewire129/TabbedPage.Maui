@@ -1,5 +1,4 @@
-﻿using CommunityToolkit.Maui;
-using TabbedPage.Maui.Themes;
+﻿using TabbedPage.Maui.Themes;
 
 namespace TabbedPage.Maui;
 
