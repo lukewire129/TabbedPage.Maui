@@ -1,33 +1,34 @@
-﻿using System.ComponentModel;
+using System.ComponentModel;
 
 namespace TabbedPage.Maui.UI.Units;
 
-public partial class BottomNavigationBar : TemplatedView
+[ContentProperty (nameof (Items))]
+public partial class BottomNavigationBar : ContentView
 {
-    public static readonly BindableProperty ItemsProperty = BindableProperty.Create(nameof(Items), typeof(BottomNavigationBarItems), typeof(BottomNavigationBar), default(BottomNavigationBarItems), propertyChanged: OnItemsChanged);
+    public static readonly BindableProperty ItemsProperty = BindableProperty.Create (nameof (Items), typeof (BottomNavigationBarItems), typeof (BottomNavigationBar), default (BottomNavigationBarItems), propertyChanged: OnItemsChanged);
 
     static void OnItemsChanged(BindableObject bindable, object oldValue, object newValue)
     {
-        (bindable as BottomNavigationBar)?.UpdateItems();
+        (bindable as BottomNavigationBar)?.UpdateItems ();
     }
 
     public BottomNavigationBarItems Items
     {
-        get => (BottomNavigationBarItems)GetValue(ItemsProperty);
-        set => SetValue(ItemsProperty, value);
+        get => (BottomNavigationBarItems)GetValue (ItemsProperty);
+        set => SetValue (ItemsProperty, value);
     }
 
     public static readonly BindableProperty SelectedItemProperty =
-            BindableProperty.Create(nameof(SelectedItem), typeof(BottomNavigationBarItem), typeof(BottomNavigationBar), null);
+            BindableProperty.Create (nameof (SelectedItem), typeof (BottomNavigationBarItem), typeof (BottomNavigationBar), null);
 
     public BottomNavigationBarItem SelectedItem
     {
-        get => (BottomNavigationBarItem)GetValue(SelectedItemProperty);
-        set { SetValue(SelectedItemProperty, value); }
+        get => (BottomNavigationBarItem)GetValue (SelectedItemProperty);
+        set { SetValue (SelectedItemProperty, value); }
     }
 
     public static readonly BindableProperty IndicatorProperty =
-            BindableProperty.Create (nameof (Indicator), typeof (View), typeof (BottomNavigationBar), propertyChanged:(bindable, oldValue, newValue)=>
+            BindableProperty.Create (nameof (Indicator), typeof (View), typeof (BottomNavigationBar), propertyChanged: (bindable, oldValue, newValue) =>
             {
                 (bindable as BottomNavigationBar)?.UpdateIndicator ();
             });
@@ -53,17 +54,25 @@ public partial class BottomNavigationBar : TemplatedView
 
     ContentView _tabsBackground;
     ContentView _indicator;
-    protected override void OnApplyTemplate()
-    {
-        base.OnApplyTemplate();
-        _tabsBackground = GetTemplateChild ("PART_TabsBackground") as ContentView;
-        _indicator = GetTemplateChild ("PART_Indicator") as ContentView;
-        _container = GetTemplateChild("PART_Grd") as Grid;
 
+    public BottomNavigationBar()
+    {
+        InitializeComponent ();
+
+        _tabsBackground = PART_TabsBackground;
+        _indicator = PART_Indicator;
+        _container = PART_Grd;
+
+        this.Loaded += BottomNavigationBar_Loaded;
+    }
+
+    private void BottomNavigationBar_Loaded(object? sender, EventArgs e)
+    {
         UpdateIndicator ();
         UpdateBackground ();
         UpdateItems ();
     }
+
     void UpdateIndicator()
     {
         if (Indicator == null)
@@ -87,20 +96,20 @@ public partial class BottomNavigationBar : TemplatedView
             return;
         if (this._container == null)
             return;
-        List<ColumnDefinition> def = new List<ColumnDefinition>();
+        List<ColumnDefinition> def = new List<ColumnDefinition> ();
         for (int i = 0; i < Items.Count; i++)
         {
-            def.Add(new ColumnDefinition(GridLength.Star));
+            def.Add (new ColumnDefinition (GridLength.Star));
         }
-        _container.ColumnDefinitions = new ColumnDefinitionCollection(def.ToArray());
+        _container.ColumnDefinitions = new ColumnDefinitionCollection (def.ToArray ());
         int j = 0;
         foreach (var child in Items)
         {
-            if (!_container.Children.Contains(child))
+            if (!_container.Children.Contains (child))
             {
                 child.Index = j;
-                Grid.SetColumn(child, j++);
-                _container.Children.Add(child);
+                Grid.SetColumn (child, j++);
+                _container.Children.Add (child);
             }
         }
         if (this._indicator == null)
@@ -110,30 +119,31 @@ public partial class BottomNavigationBar : TemplatedView
 
     void IndicatorUpdate()
     {
-        if(Indicator == null) return;   
+        if (Indicator == null)
+            return;
         this._indicator.Content = Indicator;
     }
 
-    [EditorBrowsable(EditorBrowsableState.Never)]
+    [EditorBrowsable (EditorBrowsableState.Never)]
     internal void SendItemTapped(TappedEventArgs args)
     {
 
     }
     public Action<int> SelectedIndex { get; set; }
-    [EditorBrowsable(EditorBrowsableState.Never)]
+    [EditorBrowsable (EditorBrowsableState.Never)]
     public void UpdateSelectedItem(BottomNavigationBarItem selectedItem, bool isSelected)
     {
         if (SelectedItem == selectedItem)
             return;
 
-        UnSelectItems(Items);
-        selectedItem.ChangeSelected(isSelected);
+        UnSelectItems (Items);
+        selectedItem.ChangeSelected (isSelected);
 
         SelectedItem = selectedItem;
 
-        if(_indicator.Content is BottomNavigationBarIndicator indicator)
+        if (_indicator.Content is BottomNavigationBarIndicator indicator)
         {
-            indicator.SelectionItem (selectedItem.Index);            
+            indicator.SelectionItem (selectedItem.Index);
         }
         SelectedIndex?.Invoke (selectedItem.Index);
     }
@@ -142,7 +152,7 @@ public partial class BottomNavigationBar : TemplatedView
     {
         foreach (var child in items)
         {
-            child.ChangeSelected(false);
+            child.ChangeSelected (false);
         }
     }
 }

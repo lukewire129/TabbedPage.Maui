@@ -1,6 +1,4 @@
-﻿using TabbedPage.Maui.Themes;
-
-namespace DemoApp2
+﻿namespace DemoApp2
 {
     public partial class App : Application
     {

@@ -23,15 +23,13 @@
             <units:BottomNavigationBar.TabsBackground>
                 <Grid BackgroundColor="#fffdff" />
             </units:BottomNavigationBar.TabsBackground>
-            <units:BottomNavigationBar.Items>
-                <units:BottomNavigationBarItems>
-                    <ctrls:IconTab Type="Home" />
-                    <ctrls:IconTab Type="Shop" />
-                    <ctrls:IconTab Type="Group" />
-                    <ctrls:IconTab Type="Cart" />
-                    <ctrls:IconTab Type="Me" />
-                </units:BottomNavigationBarItems>
-            </units:BottomNavigationBar.Items>
+            <units:BottomNavigationBarItems>
+                <ctrls:IconTab Type="Home" />
+                <ctrls:IconTab Type="Shop" />
+                <ctrls:IconTab Type="Group" />
+                <ctrls:IconTab Type="Cart" />
+                <ctrls:IconTab Type="Me" />
+            </units:BottomNavigationBarItems>
         </units:BottomNavigationBar>
     </views:LazyTabbedPage.NavigatorBar>
 </views:LazyTabbedPage>
