@@ -16,12 +16,14 @@
         <units:BottomNavigationBar.TabsBackground>
             <Grid BackgroundColor="#fffdff" />
         </units:BottomNavigationBar.TabsBackground>
-        <units:BottomNavigationBarItems>
-            <ctrls:IconTab Text="Home" Type="Home" />
-            <ctrls:IconTab Text="Shop" Type="Shop" />
-            <ctrls:IconTab Text="Wishlist" Type="Wishlist" />
-            <ctrls:IconTab Text="Cart" Type="Cart" />
-            <ctrls:IconTab Text="Me" Type="Me" />
-        </units:BottomNavigationBarItems>
+        <units:BottomNavigationBar.Items>
+            <units:BottomNavigationBarItems>
+                <ctrls:IconTab Text="Home" Type="Home" />
+                <ctrls:IconTab Text="Shop" Type="Shop" />
+                <ctrls:IconTab Text="Wishlist" Type="Wishlist" />
+                <ctrls:IconTab Text="Cart" Type="Cart" />
+                <ctrls:IconTab Text="Me" Type="Me" />
+            </units:BottomNavigationBarItems>
+        </units:BottomNavigationBar.Items>
     </units:BottomNavigationBar>
 </ContentPage>

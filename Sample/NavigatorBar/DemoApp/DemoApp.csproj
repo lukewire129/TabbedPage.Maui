@@ -69,6 +69,15 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Compile Update="Units\BottomTab.xaml.cs">
+	    <DependentUpon>BottomTab.xaml</DependentUpon>
+	  </Compile>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiXaml Update="Units\BottomTab.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Units\Indicator.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
