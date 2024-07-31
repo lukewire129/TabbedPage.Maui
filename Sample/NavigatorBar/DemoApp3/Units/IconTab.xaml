@@ -7,7 +7,7 @@
     xmlns:mi="http://www.aathifmahir.com/dotnet/2022/maui/icons"
     xmlns:units="clr-namespace:TabbedPage.Maui.UI.Units;assembly=TabbedPage.Maui"
     x:Name="this">
-    <Grid HeightRequest="100">
+    <Grid HeightRequest="80">
         <Grid x:Name="PART_IconArea" HorizontalOptions="Center">
             <mi:MauiIcon
                 x:Name="PART_Icon"
@@ -53,7 +53,7 @@
 
         <Label
             x:Name="PART_Text"
-            Margin="0,70,0,0"
+            Margin="0,60,0,0"
             FontAttributes="Bold"
             FontSize="14"
             HorizontalOptions="Center"

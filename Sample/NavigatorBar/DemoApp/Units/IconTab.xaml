@@ -10,7 +10,7 @@
         <Grid x:Name="PART_IconArea" HorizontalOptions="Center">
             <Path
                 x:Name="PART_Icon"
-                Margin="23,0,0,0"
+                Margin="26,0,0,0"
                 Fill="#44333333"
                 HeightRequest="40"
                 Scale="1.4"

@@ -11,7 +11,6 @@ namespace SampleLazyTabbedPage
             var builder = MauiApp.CreateBuilder ();
             builder
                 .UseMauiApp<App> ()
-                .UseLazyTabbedPage ()
                 .UseMaterialOutlinedMauiIcons ()
                 .ConfigureFonts (fonts =>
                 {

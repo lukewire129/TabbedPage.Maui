@@ -11,7 +11,6 @@ namespace DemoApp4
             builder
                 .UseMauiApp<App> ()
                 .UseMaterialOutlinedMauiIcons ()
-                .UseLazyTabbedPage()
                 .ConfigureFonts (fonts =>
                 {
                     fonts.AddFont ("OpenSans-Regular.ttf", "OpenSansRegular");

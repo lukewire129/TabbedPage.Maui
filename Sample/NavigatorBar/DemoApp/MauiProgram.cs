@@ -9,7 +9,6 @@ namespace DemoApp
             var builder = MauiApp.CreateBuilder ();
             builder
                 .UseMauiApp<App> ()
-                .UseLazyTabbedPage ()
                 .ConfigureFonts (fonts =>
                 {
                     fonts.AddFont ("OpenSans-Regular.ttf", "OpenSansRegular");

@@ -2,10 +2,10 @@
 
 namespace TabbedPage.Maui.UI.Units;
 
-public partial class BottomNavigationBar : TemplatedView
+public partial class BottomNavigationBar : ContentView
 {
     public static new readonly BindableProperty PaddingProperty = BindableProperty.Create (nameof (Padding), typeof (Thickness), typeof (BottomNavigationBar), new Thickness());
-    [TypeConverter (typeof (BrushTypeConverter))]
+
     public new Thickness Padding
     {
         get => (Thickness)GetValue (PaddingProperty);
