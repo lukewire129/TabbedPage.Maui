@@ -2,7 +2,6 @@ using System.ComponentModel;
 
 namespace TabbedPage.Maui.UI.Units;
 
-[ContentProperty (nameof (Items))]
 public partial class BottomNavigationBar : ContentView
 {
     public static readonly BindableProperty ItemsProperty = BindableProperty.Create (nameof (Items), typeof (BottomNavigationBarItems), typeof (BottomNavigationBar), default (BottomNavigationBarItems), propertyChanged: OnItemsChanged);
